@@ -7,6 +7,9 @@ var btn = document.getElementById('submitbutton');
 var contextname = document.getElementById('contextname');
 var contextaggregate = document.getElementById('contextaggregate');
 
+let studentsdata = JSON.parse(localStorage.getItem("StudentsData")) || [];
+
+
 btn.addEventListener('click' , (e)=>{
   
    var agg =  ((matric.value/1100) * 0.2) + ((fsc.value/1100) * 0.3) + ((ecat.value/400) * 0.5);
@@ -21,10 +24,17 @@ btn.addEventListener('click' , (e)=>{
     {
         alert('You are not eligible for admission!');
     }
+    studentname = name1.value;
+    studentagg = agg*100;
+
+    studentsdata.push({studentname , studentagg});
+
+    localStorage.setItem("StudentsData" , JSON.stringify(studentsdata));
+
 
     setTimeout(clearfields, 8000);
-    
-})
+ 
+});
 
 
 

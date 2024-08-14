@@ -1,0 +1,29 @@
+.footer{
+    margin: 0;
+    background-color: rgb(165, 165, 193);
+    text-align: center;
+    font-size: large;
+    padding: 10px; /* Adjust padding if needed */
+   
+}
+
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    transition: .5s ease;
+}
+
+.social-media a:hover{
+    background: rgb(176, 101, 176);
+    color:rgb(89, 38, 138);
+    box-shadow: 0 0 1rem rgb(156, 80, 176);
+}

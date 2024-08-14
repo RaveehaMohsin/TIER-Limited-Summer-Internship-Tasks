@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px; 
+    border: 1px solid rgb(230, 192, 192);
+    box-shadow: 20cm;
+    padding: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 0 auto; 
+   
+  }  
+  .minputs {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 1%;
+}
+
+.mbutton{
+    width: 100%;
+    
+}
+
+.mbutton button{
+    margin-bottom: 2%;
+    color: white;
+    width: 50%;
+    background-color: rgb(48, 48, 192);
+}
+
+
+ @media (max-width: 600px) {
+    .container {
+      width: 100%; /* Allow the container to be responsive */
+      max-width: 90%; /* Maintain some margin on smaller screens */
+    } 
+}
+  

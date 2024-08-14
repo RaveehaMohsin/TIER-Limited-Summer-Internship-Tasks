@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.navheading {
+    font-weight: 600;
+}
+
+
+.homecontainer {
+    background: #002e36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 12%;
+    flex-wrap: wrap;
+    
+}
+
+.moviecontext {
+    flex: 1;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.moviecontext .details span {
+    padding-right: 30px;
+    font-size: 0.8rem;
+    color: #d3d3d3;
+
+}
+
+@font-face {
+    font-family: 'Algerian';
+    src: url('fonts/algerian.ttf') format('truetype');
+}
+
+.moviecontext .mtitle h2 {
+    font-size: 4rem;
+    font-family: 'Algerian', serif;
+    background: linear-gradient(to right, #3182a29a, #0a98b1);
+    /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.moviecontext .moviep p {
+    padding-right: 30px;
+    font-size: 1rem;
+    color: #d3d3d3;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+
+.moviecontext .actorsname ul {
+    padding: 0;
+    /* Remove padding */
+    margin: 2%;
+    /* Remove margin */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+}
+
+.moviecontext .actorsname ul li {
+    font-size: 1rem;
+    color: #83c3ce;
+    width: 50%;
+    /* Each item takes up half of the container width */
+    box-sizing: border-box;
+    /* Include padding and border in the element’s total width and height */
+}
+
+.mbtn {
+    display: inline-flex;
+    /* Align icon and text in a row */
+    align-items: center;
+    /* Center-align items vertically */
+    padding: 10px 20px;
+    /* Add padding */
+    font-size: 1rem;
+    /* Set font size */
+    color: #ffffff;
+    /* Text color */
+    background-color: #07435b9a;
+    /* Button background color */
+    border: none;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Round corners */
+    cursor: pointer;
+    /* Show pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth transitions */
+}
+
+.mbtn i {
+    margin-right: 8px;
+    /* Space between icon and text */
+    font-size: 1.2rem;
+    /* Size of the icon */
+}
+
+.mbtn:hover {
+    background-color: #0056b3;
+    /* Darker background on hover */
+    transform: scale(1.05);
+    /* Slightly scale up on hover */
+}
+
+.mbtn:active {
+    background-color: #004494;
+    /* Even darker background on click */
+}
+
+.movieimages {
+    flex: 1;
+    position: relative;
+    /* Establish positioning context */
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Vertically center images */
+    justify-content: center;
+    /* Horizontally center images */
+    margin-top: 10%;
+}
+
+.image {
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 50px 20px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    /* Position images absolutely within container */
+    object-fit: cover;
+    /* Ensure images cover their containers */
+}
+
+.left-image {
+    width: 30%;
+    /* Adjust based on design */
+    left: 10%;
+    /* Position image towards the left */
+    z-index: 1;
+    /* Ensure it’s below the center image */
+}
+
+.right-image {
+    width: 30%;
+    /* Adjust based on design */
+    right: 10%;
+    /* Position image towards the right */
+    z-index: 1;
+    /* Ensure it’s below the center image */
+}
+
+.center-image {
+    width: 45%;
+    /* Adjust based on design */
+    height: auto;
+    /* Maintain aspect ratio */
+    z-index: 2;
+    /* Ensure it’s above the left and right images */
+}
+
+/* Define keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Apply fade-in animation to elements */
+
+
+.moviecontext {
+    animation: fadeIn 1.5s ease-out 0.5s;
+    /* Delay start for a staggered effect */
+}
+
+
+
+/* Apply floating animation to images */
+.image {
+    animation: floatUpDown 3s ease-in-out infinite;
+    /* Continuous floating effect */
+}
+
+.left-image,
+.right-image,
+.center-image {
+    /* Ensure floating applies to all images */
+    animation: floatUpDown 3s ease-in-out infinite;
+    /* Continuous floating effect */
+}
+
+#highlights {
+    background: #002e36e4;
+}
+
+#highlights .container h1 {
+    padding-top: 5%;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #fff;
+    font-family: 'Algerian', serif;
+}
+
+#highlights .container p {
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+
+}
+
+.moviescontainer {
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.singlemovie {
+    flex: 1 1 calc(25% - 1rem);
+    max-width: calc(25% - 1rem);
+    box-sizing: border-box;
+    margin-bottom: 1rem;/
+}
+
+.singlemovie img {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.singlemovie i {
+    margin-top: 4%;
+}
+
+.singlemovie h4 {
+    color: #fff;
+    font-weight: 520;
+}
+
+.singlemovie span {
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .singlemovie {
+        flex: 1 1 calc(50% - 1rem);
+        /* Basis is 50% minus gap for 2 items in a row */
+        max-width: calc(50% - 1rem);
+        /* Ensure items don’t exceed 50% of container width */
+    }
+}
+
+@media (max-width: 768px) {
+    .singlemovie {
+        flex: 1 1 calc(100% - 1rem);
+        /* Basis is 100% minus gap for 1 item in a row */
+        max-width: calc(100% - 1rem);
+        /* Ensure items don’t exceed 100% of container width */
+    }
+}
+
+
+#discover {
+    background: #002e36;
+    padding-bottom: 0; /* Ensure no padding at the bottom */
+}
+
+#discover .container h1 {
+    padding-top: 3%;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #fff;
+    font-family: 'Algerian', serif;
+    margin: 0; /* Reset margin */
+}
+
+#discover .container p {
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    margin: 0; /* Reset margin */
+    padding-bottom: 20px; /* Optional: Add specific padding if needed */
+}
+
+#discover .container ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+}
+
+#discover .container ul li {
+    width: 30%;
+    color: #6b9bb5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#latestmovies {
+
+    background-color: #002e36e4;
+}
+
+#latestmovies h1 {
+    padding-top: 3%;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #fff;
+    font-family: 'Algerian', serif;
+}
+
+/* Container for the movie elements */
+#moviesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual movie element styling */
+
+.movie {
+    background-color: #b6e4ec5f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(25% - 20px);
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+    position: relative;
+}
+
+.movie:hover {
+    transform: translateY(-10px);
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    max-height: 60%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.movie:hover .overlay {
+    opacity: 1;
+}
+
+.overlay button {
+    background-color: #82ecff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overlay button:hover{
+    background-color: #00a0bc;
+}
+
+.movie h2 {
+    font-size: 1.6em;
+    color: #b7a2a2;
+    height: auto;
+    font-weight: bold;
+}
+
+.movie p {
+    font-size: 0.9em;
+    color: #ffffff;
+    padding: 0 10px;
+    height: auto;
+    max-height: 60px;
+    overflow: hidden;
+}
+
+/* Responsive styling */
+@media (max-width: 1200px) {
+    .movie {
+        width: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .movie {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .movie {
+        width: calc(100% - 20px);
+    }
+}
+
+
+#watchlist {
+    background-color: #002e36e4;
+    padding-bottom: 5%;
+}
+
+#watchlist h1 {
+    padding-top: 3%;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #fff;
+    font-family: 'Algerian', serif;
+    margin-bottom: 2%;
+}
+
+.table-group-divider td {
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table-group-divider img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.table-group-divider .btn {
+    font-size: 16px;
+    padding: 8px;
+}
+
+
+.table-group-divider .btn-warning:hover {
+    background-color: #f39c12;
+}
+
+.table-group-divider .btn-danger:hover {
+    background-color: #c0392b;
+}
+
+
+#contact {
+    margin: 0%;
+    padding: 0%;
+    background: #002e36e4;
+}
+
+#contact .container h1 {
+    padding-top: 5%;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #fff;
+    font-family: 'Algerian', serif;
+}
+
+#contact .container p {
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.contact-methods {
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.contact-method {
+    flex: 1 1 calc(33% - 1rem);
+    max-width: calc(33% - 1rem);
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.contact-method i {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.contact-method h4 {
+    color: #fff;
+    font-weight: 520;
+}
+
+.contact-method span {
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .contact-method {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-method {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+#footer {
+    background: #001f27;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    max-width: 30%;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Algerian', serif;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #6b9bb5;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #6b9bb5;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-section .social ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-section .social ul li a {
+    font-size: 1.5rem;
+    color: #6b9bb5;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

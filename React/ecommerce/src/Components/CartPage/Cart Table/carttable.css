@@ -1,0 +1,14 @@
+.cart{
+    margin: 5%;
+
+}
+#cart h2{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 2%;
+}
+
+#cart button{
+   justify-content: center;
+   align-items: center;
+}

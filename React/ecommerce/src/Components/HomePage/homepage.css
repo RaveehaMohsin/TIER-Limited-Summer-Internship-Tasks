@@ -1,0 +1,7 @@
+#home img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: 0;
+}
